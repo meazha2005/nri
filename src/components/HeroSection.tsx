@@ -29,17 +29,6 @@ export default function HeroSection() {
           {/* Left Column: Compelling Pitch & Trust Pillars */}
           <div className="lg:col-span-7 space-y-6">
             
-            {/* Elite Badge */}
-            <div className="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 shadow-sm text-emerald-900 text-xs sm:text-sm font-semibold">
-              <span className="flex h-2 w-2 rounded-full bg-emerald-600 animate-pulse" />
-              <span className="text-amber-800 font-extrabold italic">&ldquo;Honest is key for success&rdquo;</span>
-              <span className="text-slate-400">•</span>
-              <span className="text-emerald-800 font-bold">சொந்த மண்ணில் சொந்த வீடு</span>
-              <span className="text-slate-400">•</span>
-              <span className="text-slate-800 font-bold">Sri Thirumagal Builders Group</span>
-              <span className="text-slate-400">•</span>
-              <span className="text-slate-700">Trusted by 1,800+ Families</span>
-            </div>
 
             {/* Main Title */}
             <div className="space-y-3">
