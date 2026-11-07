@@ -11,45 +11,77 @@ import {
   TrendingUp,
   MapPin,
   Sparkles,
-  Award,
-  CheckCircle2,
 } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-white pt-6 pb-16 lg:pt-12 lg:pb-24 border-b border-slate-100">
-      {/* Subtle Background Glows matching Logo Emerald & Gold */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-emerald-50/60 via-amber-50/30 to-transparent pointer-events-none -z-10 rounded-full blur-3xl opacity-70" />
-      <div className="absolute top-20 right-0 w-80 h-80 bg-emerald-100/40 rounded-full blur-3xl pointer-events-none -z-10" />
-      <div className="absolute top-40 left-0 w-80 h-80 bg-amber-100/40 rounded-full blur-3xl pointer-events-none -z-10" />
+    <section className="relative overflow-hidden bg-slate-950 pt-6 pb-16 lg:pt-12 lg:pb-24 border-b border-slate-800">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* ── NRI Landmark Background Collage ── */}
+      {/* Statue of Liberty — left */}
+      <div className="absolute inset-y-0 left-0 w-1/3 pointer-events-none">
+        <Image
+          src="https://images.unsplash.com/photo-1507912949-82ee1854ad80?w=700&q=60"
+          alt="Statue of Liberty USA"
+          fill
+          className="object-cover object-center opacity-35"
+          priority
+        />
+      </div>
+      {/* London Tower Bridge — centre */}
+      <div className="absolute inset-y-0 left-1/3 w-1/3 pointer-events-none">
+        <Image
+          src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=700&q=60"
+          alt="London Tower Bridge UK"
+          fill
+          className="object-cover object-center opacity-35"
+        />
+      </div>
+      {/* Burj Khalifa Dubai — right */}
+      <div className="absolute inset-y-0 right-0 w-1/3 pointer-events-none">
+        <Image
+          src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=700&q=60"
+          alt="Burj Khalifa Dubai UAE"
+          fill
+          className="object-cover object-center opacity-35"
+        />
+      </div>
+
+      {/* Softer dimmer overlay to keep the global-city backdrop visible but still readable */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/55 via-slate-900/45 to-slate-950/60 pointer-events-none" />
+      {/* Subtle emerald glow top-center */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-64 bg-emerald-700/15 blur-3xl rounded-full pointer-events-none" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          {/* Left Column: Compelling Pitch & Trust Pillars */}
+
+          {/* Left Column */}
           <div className="lg:col-span-7 space-y-6">
-            
 
             {/* Main Title */}
             <div className="space-y-4">
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-[1.1]">
-                <span className="text-slate-900">Your Dream Land in</span>{' '}
-                <span className="bg-gradient-to-r from-emerald-700 via-emerald-800 to-amber-600 bg-clip-text text-transparent">
-                  Tamil Nadu
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15]">
+                {/* Sentence 1 */}
+                <span className="block">
+                  Your Dream Land in{' '}
+                  <span className="bg-gradient-to-r from-emerald-400 via-emerald-300 to-amber-400 bg-clip-text text-transparent">
+                    Tamil Nadu.
+                  </span>
                 </span>
-                <span className="block text-2xl sm:text-4xl lg:text-5xl mt-2 font-extrabold text-slate-800">
-                  Buy & Sell — Without Leaving Your Country.
+                {/* Sentence 2 */}
+                <span className="block mt-3 text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-200 border-l-4 border-emerald-500 pl-4">
+                  Buy &amp; Sell — Without Leaving Your Country.
                 </span>
               </h1>
-              <p className="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
-                <strong className="text-slate-900 font-semibold">Buy verified plots & luxury villas</strong> or{' '}
-                <strong className="text-emerald-800 font-semibold">sell ancestral land & property</strong> — 100% remotely,
+              <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+                <strong className="text-white font-semibold">Buy verified plots &amp; luxury villas</strong> or{' '}
+                <strong className="text-emerald-400 font-semibold">sell ancestral land &amp; property</strong> — 100% remotely,
                 with High Court legal vetting, Remote Power of Attorney, fair market valuation, and seamless FEMA repatriation.
               </p>
               {/* City Tags */}
               <div className="flex flex-wrap gap-2 pt-1">
                 {['Chennai', 'Mahabalipuram', 'Coimbatore', 'Madurai', 'Hosur', 'Trichy'].map((city) => (
-                  <span key={city} className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold">
+                  <span key={city} className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-emerald-300 text-xs font-semibold backdrop-blur-sm">
                     <MapPin className="w-3 h-3" />
                     {city}
                   </span>
@@ -59,27 +91,27 @@ export default function HeroSection() {
 
             {/* NRI Exclusive Highlights */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
-              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-slate-50 border border-slate-200">
-                <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0" />
+              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/8 border border-white/10 backdrop-blur-sm">
+                <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0" />
                 <div className="text-xs">
-                  <div className="font-bold text-slate-900">30-Yr Clear Title</div>
-                  <div className="text-slate-500">Nil Encumbrance (EC)</div>
+                  <div className="font-bold text-white">30-Yr Clear Title</div>
+                  <div className="text-slate-400">Nil Encumbrance (EC)</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-slate-50 border border-slate-200">
-                <FileCheck2 className="w-5 h-5 text-amber-600 shrink-0" />
+              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/8 border border-white/10 backdrop-blur-sm">
+                <FileCheck2 className="w-5 h-5 text-amber-400 shrink-0" />
                 <div className="text-xs">
-                  <div className="font-bold text-slate-900">Remote PoA</div>
-                  <div className="text-slate-500">Embassy Attested</div>
+                  <div className="font-bold text-white">Remote PoA</div>
+                  <div className="text-slate-400">Embassy Attested</div>
                 </div>
               </div>
 
-              <div className="col-span-2 sm:col-span-1 flex items-center gap-2 p-2.5 rounded-xl bg-slate-50 border border-slate-200">
-                <Video className="w-5 h-5 text-teal-600 shrink-0" />
+              <div className="col-span-2 sm:col-span-1 flex items-center gap-2 p-2.5 rounded-xl bg-white/8 border border-white/10 backdrop-blur-sm">
+                <Video className="w-5 h-5 text-teal-400 shrink-0" />
                 <div className="text-xs">
-                  <div className="font-bold text-slate-900">Live 4K Drone</div>
-                  <div className="text-slate-500">Walkthrough on Zoom</div>
+                  <div className="font-bold text-white">Live 4K Drone</div>
+                  <div className="text-slate-400">Walkthrough on Zoom</div>
                 </div>
               </div>
             </div>
@@ -88,7 +120,7 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
               <a
                 href="#nri-services"
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm sm:text-base font-bold text-white bg-emerald-700 hover:bg-emerald-800 rounded-xl shadow-lg shadow-emerald-700/25 transition-all hover:scale-[1.02] border border-emerald-600"
+                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm sm:text-base font-bold text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl shadow-lg shadow-emerald-900/40 transition-all hover:scale-[1.02] border border-emerald-500"
               >
                 <span>Explore NRI Services</span>
                 <ArrowRight className="w-4 h-4" />
@@ -96,121 +128,113 @@ export default function HeroSection() {
 
               <a
                 href="#properties"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm sm:text-base font-bold text-slate-800 bg-amber-50 hover:bg-amber-100 border border-amber-300 rounded-xl transition-all"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm sm:text-base font-bold text-amber-300 bg-amber-900/30 hover:bg-amber-900/50 border border-amber-600/50 rounded-xl transition-all backdrop-blur-sm"
               >
-                <Sparkles className="w-4 h-4 text-amber-600" />
+                <Sparkles className="w-4 h-4 text-amber-400" />
                 <span>View Verified Properties</span>
               </a>
 
               <a
                 href="#sell-property"
-                className="inline-flex items-center justify-center gap-1.5 px-5 py-3.5 text-sm sm:text-base font-bold text-emerald-900 bg-white hover:bg-emerald-50 border border-emerald-300 rounded-xl transition-all"
+                className="inline-flex items-center justify-center gap-1.5 px-5 py-3.5 text-sm sm:text-base font-bold text-white bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl transition-all backdrop-blur-sm"
               >
                 <span>Want to Sell Land?</span>
               </a>
             </div>
 
             {/* Social Proof Flags */}
-            <div className="pt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-500">
-              <span className="font-medium text-slate-700">Dedicated NRI Desks for:</span>
-              <span className="inline-flex items-center gap-1 font-semibold text-slate-800">
-                <span>🇺🇸 USA</span>
-              </span>
-              <span className="inline-flex items-center gap-1 font-semibold text-slate-800">
-                <span>🇦🇪 UAE</span>
-              </span>
-              <span className="inline-flex items-center gap-1 font-semibold text-slate-800">
-                <span>🇸🇬 Singapore</span>
-              </span>
-              <span className="inline-flex items-center gap-1 font-semibold text-slate-800">
-                <span>🇬🇧 UK</span>
-              </span>
-              <span className="inline-flex items-center gap-1 font-semibold text-slate-800">
-                <span>🇦🇺 Australia</span>
-              </span>
-              <span className="inline-flex items-center gap-1 font-semibold text-slate-800">
-                <span>🇲🇾 Malaysia</span>
-              </span>
+            <div className="pt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-400">
+              <span className="font-medium text-slate-300">Dedicated NRI Desks for:</span>
+              <span className="inline-flex items-center gap-1 font-semibold text-slate-200"><span>🇺🇸 USA</span></span>
+              <span className="inline-flex items-center gap-1 font-semibold text-slate-200"><span>🇦🇪 UAE</span></span>
+              <span className="inline-flex items-center gap-1 font-semibold text-slate-200"><span>🇸🇬 Singapore</span></span>
+              <span className="inline-flex items-center gap-1 font-semibold text-slate-200"><span>🇬🇧 UK</span></span>
+              <span className="inline-flex items-center gap-1 font-semibold text-slate-200"><span>🇦🇺 Australia</span></span>
+              <span className="inline-flex items-center gap-1 font-semibold text-slate-200"><span>🇲🇾 Malaysia</span></span>
             </div>
 
           </div>
 
-          {/* Right Column: Visual Showcase Card */}
+          {/* Right Column: Land Image Grid */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              
-              {/* Outer Decorative Gradient Border */}
-              <div className="relative rounded-3xl p-1 bg-gradient-to-tr from-emerald-600 via-amber-400 to-emerald-700 shadow-2xl shadow-emerald-950/15">
-                <div className="relative rounded-[22px] overflow-hidden bg-slate-900">
+
+              {/* 2x2 Image Grid */}
+              <div className="grid grid-cols-2 gap-3">
+
+                {/* Card 1 — Chennai */}
+                <div className="relative rounded-2xl overflow-hidden h-48 sm:h-56 group shadow-lg ring-1 ring-white/10">
                   <Image
-                    src="/hero-villa.jpg"
-                    alt="Luxury Coastal Villa in Chennai Tamil Nadu"
-                    width={720}
-                    height={520}
-                    className="w-full h-[380px] sm:h-[420px] object-cover transition-transform duration-700 hover:scale-105"
+                    src="/hero-chennai.jpg"
+                    alt="Plotted land layout Chennai Tamil Nadu"
+                    fill
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     priority
                   />
-
-                  {/* Gradient Overlay for Text Legibility */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
-
-                  {/* Top Badges on Image */}
-                  <div className="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/95 text-slate-900 shadow-sm backdrop-blur-md">
-                      <Award className="w-3.5 h-3.5 text-amber-500" />
-                      RERA & CMDA Approved
-                    </span>
-
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-700 text-white shadow-sm">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-200" />
-                      Ready to Register
-                    </span>
-                  </div>
-
-                  {/* Bottom Information Card on Image */}
-                  <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-slate-900/90 backdrop-blur-md border border-slate-700/60 text-white">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <div className="flex items-center gap-1 text-emerald-400 text-xs font-medium">
-                          <MapPin className="w-3.5 h-3.5" />
-                          <span>ECR Coastal Belt, Chennai</span>
-                        </div>
-                        <h3 className="text-base font-bold text-white mt-0.5">The Bayview Sanctuary</h3>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-xs text-slate-400">Starting at</div>
-                        <div className="text-lg font-black text-amber-400">₹3.85 Cr</div>
-                      </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+                  <div className="absolute bottom-3 left-3 right-3">
+                    <div className="flex items-center gap-1 text-emerald-300 text-[10px] font-semibold">
+                      <MapPin className="w-3 h-3" /> ECR / OMR Belt
                     </div>
-
-                    <div className="mt-3 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-300">
-                      <span>Live Drone Walkthrough on Request</span>
-                      <span className="text-emerald-400 font-semibold">Remote PoA Included</span>
-                    </div>
+                    <div className="text-white text-xs font-bold leading-tight">Chennai</div>
                   </div>
+                  <span className="absolute top-2.5 right-2.5 bg-emerald-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full">CMDA ✓</span>
                 </div>
-              </div>
 
-              {/* Floating Stat Badge 1: Top Left */}
-              <div className="absolute -top-4 -left-4 sm:-left-6 bg-white p-3.5 rounded-2xl shadow-xl border border-slate-200 flex items-center gap-3 animate-pulse-slow">
-                <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-800 font-black">
-                  ₹
+                {/* Card 2 — Mahabalipuram */}
+                <div className="relative rounded-2xl overflow-hidden h-48 sm:h-56 group shadow-lg ring-1 ring-white/10">
+                  <Image
+                    src="/hero-mahabalipuram.jpg"
+                    alt="Mahabalipuram Shore Temple Tourist Zone"
+                    fill
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+                  <div className="absolute bottom-3 left-3 right-3">
+                    <div className="flex items-center gap-1 text-amber-300 text-[10px] font-semibold">
+                      <MapPin className="w-3 h-3" /> Tourist Zone
+                    </div>
+                    <div className="text-white text-xs font-bold leading-tight">Mahabalipuram</div>
+                  </div>
+                  <span className="absolute top-2.5 right-2.5 bg-amber-500 text-white text-[9px] font-bold px-2 py-0.5 rounded-full">DTCP ✓</span>
                 </div>
-                <div>
-                  <div className="text-xs text-slate-500 font-medium">Assets Under Management</div>
-                  <div className="text-base font-black text-slate-900">₹540+ Crores</div>
-                </div>
-              </div>
 
-              {/* Floating Stat Badge 2: Bottom Right */}
-              <div className="absolute -bottom-5 -right-4 sm:-right-6 bg-white p-3.5 rounded-2xl shadow-xl border border-slate-200 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-amber-700">
-                  <TrendingUp className="w-5 h-5" />
+                {/* Card 3 — Madurai */}
+                <div className="relative rounded-2xl overflow-hidden h-40 sm:h-48 group shadow-lg ring-1 ring-white/10">
+                  <Image
+                    src="/hero-madurai.jpg"
+                    alt="Plotted land layout Madurai Tamil Nadu"
+                    fill
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+                  <div className="absolute bottom-3 left-3 right-3">
+                    <div className="flex items-center gap-1 text-amber-300 text-[10px] font-semibold">
+                      <MapPin className="w-3 h-3" /> Cultural Hub
+                    </div>
+                    <div className="text-white text-xs font-bold leading-tight">Madurai</div>
+                  </div>
+                  <span className="absolute top-2.5 right-2.5 bg-emerald-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full">DTCP ✓</span>
                 </div>
-                <div>
-                  <div className="text-xs text-slate-500 font-medium">Avg. TN Capital Growth</div>
-                  <div className="text-base font-black text-emerald-700">14.8% CAGR</div>
+
+                {/* Card 4 — Coimbatore */}
+                <div className="relative rounded-2xl overflow-hidden h-40 sm:h-48 group shadow-lg ring-1 ring-white/10">
+                  <Image
+                    src="/hero-coimbatore.jpg"
+                    alt="Plotted land layout Coimbatore Tamil Nadu"
+                    fill
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+                  <div className="absolute bottom-3 left-3 right-3">
+                    <div className="flex items-center gap-1 text-emerald-300 text-[10px] font-semibold">
+                      <MapPin className="w-3 h-3" /> Smart City Zone
+                    </div>
+                    <div className="text-white text-xs font-bold leading-tight">Coimbatore</div>
+                  </div>
+                  <span className="absolute top-2.5 right-2.5 bg-amber-500 text-white text-[9px] font-bold px-2 py-0.5 rounded-full">DTCP ✓</span>
                 </div>
+
               </div>
 
             </div>
@@ -219,28 +243,28 @@ export default function HeroSection() {
         </div>
 
         {/* Bottom Metrics Bar */}
-        <div className="mt-16 pt-10 border-t border-slate-200 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div className="mt-16 pt-10 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div className="space-y-1">
-            <div className="text-2xl sm:text-3xl font-black text-emerald-800">1,850+</div>
-            <div className="text-xs sm:text-sm font-semibold text-slate-800">NRI Families Settled</div>
+            <div className="text-2xl sm:text-3xl font-black text-emerald-400">1,850+</div>
+            <div className="text-xs sm:text-sm font-semibold text-slate-200">NRI Families Settled</div>
             <div className="text-xs text-slate-500">Across 24+ countries</div>
           </div>
 
           <div className="space-y-1">
-            <div className="text-2xl sm:text-3xl font-black text-slate-900">100%</div>
-            <div className="text-xs sm:text-sm font-semibold text-slate-800">Clear Title Guarantee</div>
+            <div className="text-2xl sm:text-3xl font-black text-white">100%</div>
+            <div className="text-xs sm:text-sm font-semibold text-slate-200">Clear Title Guarantee</div>
             <div className="text-xs text-slate-500">High Court legal audit</div>
           </div>
 
           <div className="space-y-1">
-            <div className="text-2xl sm:text-3xl font-black text-amber-600">0 Days</div>
-            <div className="text-xs sm:text-sm font-semibold text-slate-800">Physical Travel Needed</div>
+            <div className="text-2xl sm:text-3xl font-black text-amber-400">0 Days</div>
+            <div className="text-xs sm:text-sm font-semibold text-slate-200">Physical Travel Needed</div>
             <div className="text-xs text-slate-500">Remote Consulate PoA</div>
           </div>
 
           <div className="space-y-1">
-            <div className="text-2xl sm:text-3xl font-black text-emerald-800">₹0 Hidden Fees</div>
-            <div className="text-xs sm:text-sm font-semibold text-slate-800">Transparent Pricing</div>
+            <div className="text-2xl sm:text-3xl font-black text-emerald-400">₹0 Hidden Fees</div>
+            <div className="text-xs sm:text-sm font-semibold text-slate-200">Transparent Pricing</div>
             <div className="text-xs text-slate-500">Direct developer rates</div>
           </div>
         </div>
