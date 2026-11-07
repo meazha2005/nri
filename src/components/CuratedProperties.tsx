@@ -221,7 +221,7 @@ export default function CuratedProperties() {
                 {/* Action Buttons */}
                 <div className="pt-2 grid grid-cols-2 gap-2">
                   <a
-                    href={`https://wa.me/919840012345?text=Hello%20Tamil%20NRI%20Real%20Estate,%20I%20am%20interested%20in%20${encodeURIComponent(
+                    href={`https://wa.me/919884495395?text=Hello%20TamilNRIProperty,%20I%20am%20interested%20in%20${encodeURIComponent(
                       property.title
                     )}%20(${property.location}).%20Please%20share%20the%20complete%20legal%20dossier%20and%20drone%20video.`}
                     target="_blank"

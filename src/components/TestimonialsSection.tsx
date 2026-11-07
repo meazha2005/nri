@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Star, ShieldCheck, Quote, MapPin, Globe } from 'lucide-react';
+import { Star, ShieldCheck, Quote, MapPin, Globe, User } from 'lucide-react';
 import { TESTIMONIALS } from '@/data/testimonials';
 
 export default function TestimonialsSection() {
@@ -20,7 +20,7 @@ export default function TestimonialsSection() {
             Trusted by Overseas Tamils Across 24+ Countries
           </h2>
           <p className="text-base sm:text-lg text-slate-600">
-            Read real stories of tech leaders, doctors, and professionals who purchased dream homes and plots in Tamil Nadu 
+            Read real experiences of tech leaders, doctors, and professionals who purchased dream homes and plots in Tamil Nadu 
             completely remotely.
           </p>
         </div>
@@ -66,15 +66,21 @@ export default function TestimonialsSection() {
               {/* User Bio Footer */}
               <div className="mt-6 pt-5 border-t border-slate-100 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-emerald-600/30">
-                    <Image
-                      src={test.avatar}
-                      alt={test.name}
-                      width={48}
-                      height={48}
-                      className="object-cover w-full h-full"
-                    />
-                  </div>
+                  {test.avatar ? (
+                    <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-emerald-600/30 shrink-0">
+                      <Image
+                        src={test.avatar}
+                        alt={test.name}
+                        width={48}
+                        height={48}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-emerald-800 via-emerald-700 to-amber-600 text-white font-extrabold text-sm flex items-center justify-center shadow-md border-2 border-emerald-100 shrink-0">
+                      <span>{test.initials}</span>
+                    </div>
+                  )}
                   <div>
                     <h4 className="text-sm font-bold text-slate-900">{test.name}</h4>
                     {test.tamilName && (

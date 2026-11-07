@@ -13,9 +13,12 @@ import {
   MessageCircle,
   Sparkles,
   Send,
+  Building,
+  TrendingUp,
 } from 'lucide-react';
 
 export default function ConsultationFormSection() {
+  const [intent, setIntent] = useState<'buy' | 'sell'>('buy');
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -23,7 +26,7 @@ export default function ConsultationFormSection() {
     whatsapp: '',
     currentCountry: 'United States',
     preferredTimezone: 'PST / US Pacific',
-    targetCity: 'Chennai',
+    targetCity: 'Chennai (OMR / ECR / Porur)',
     propertyType: 'Luxury Villa',
     budgetRange: '₹1 Cr - ₹2.5 Cr (~$120K - $300K)',
     notes: '',
@@ -33,21 +36,22 @@ export default function ConsultationFormSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate successful submission
     setSubmitted(true);
   };
 
   const handleWhatsAppDirect = () => {
-    const text = `Hello Tamil NRI Real Estate,
+    const text = `Hello TamilNRIProperty,
 I would like to book an NRI consultation.
-Name: ${formData.fullName || 'Overseas Buyer'}
+Purpose: ${intent === 'buy' ? 'Looking to Buy Property / Land' : 'Looking to Sell Land / Property in India'}
+Name: ${formData.fullName || 'Overseas Client'}
 Current Country: ${formData.currentCountry} (${formData.preferredTimezone})
-Interest: ${formData.targetCity} - ${formData.propertyType}
-Budget: ${formData.budgetRange}
+Region / Corridor: ${formData.targetCity}
+Property Category: ${formData.propertyType}
+${intent === 'buy' ? `Budget: ${formData.budgetRange}` : `Expected Valuation: ${formData.budgetRange}`}
 WhatsApp: ${formData.countryCode} ${formData.whatsapp}`;
 
     window.open(
-      `https://wa.me/919840012345?text=${encodeURIComponent(text)}`,
+      `https://wa.me/919884495395?text=${encodeURIComponent(text)}`,
       '_blank'
     );
   };
@@ -74,8 +78,8 @@ WhatsApp: ${formData.countryCode} ${formData.whatsapp}`;
                 உங்கள் வசதிக்கேற்ப இணையவழி சந்திப்பு • Tailored to Your Time Zone
               </div>
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                Speak directly with an experienced Senior NRI Portfolio Manager. We discuss verified title dossiers, 
-                upcoming infrastructure growth catalysts, remote Power of Attorney mechanics, and FEMA compliance.
+                Speak directly with an experienced Senior NRI Manager. We discuss verified title dossiers, 
+                upcoming infrastructure growth catalysts, remote Power of Attorney mechanics, fair market appraisals, and FEMA compliance for both buyers and sellers.
               </p>
             </div>
 
@@ -87,11 +91,11 @@ WhatsApp: ${formData.countryCode} ${formData.whatsapp}`;
 
               <div className="space-y-2.5">
                 {[
-                  'Personalized corridor recommendation matching your investment goals',
-                  '12-Point High Court Legal Title audit checklist for your shortlisted property',
-                  'Remote Power of Attorney (PoA) roadmap via your local Indian Embassy',
-                  'NRE/NRO banking & tax repatriation framework (Form 15CA/15CB)',
-                  'Live 4K Drone walkthrough demo and upcoming corridor infrastructure masterplans',
+                  'Personalized corridor recommendation or fair market valuation matching your goals',
+                  '12-Point High Court Legal Title audit checklist or title-clearing roadmap',
+                  'Remote Power of Attorney (PoA) guidance via your local Indian Embassy / Consulate',
+                  'FEMA banking & tax repatriation framework (Lower TDS Form 13 & Form 15CA/15CB)',
+                  'Live 4K Drone walkthrough demo or physical revenue boundary inspection',
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700">
                     <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -129,12 +133,9 @@ WhatsApp: ${formData.countryCode} ${formData.whatsapp}`;
                   <h3 className="text-2xl font-bold text-slate-900">
                     Consultation Request Confirmed!
                   </h3>
-                  <div className="text-sm font-semibold text-amber-700">
-                    நன்றி! எங்கள் NRI ஆலோசகர் விரைவில் உங்களைத் தொடர்புகொள்வார்.
-                  </div>
-                  <p className="text-xs sm:text-sm text-slate-600 max-w-md mx-auto">
-                    Our Senior NRI Portfolio Manager has received your details and will connect with you via 
-                    WhatsApp and Email within <strong>4 hours</strong> matching your local timezone.
+                  <p className="text-xs sm:text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
+                    Thank you, <strong>{formData.fullName || 'Overseas Client'}</strong>. Our Senior NRI Manager has received your details 
+                    and will reach out via WhatsApp at <strong>{formData.countryCode} {formData.whatsapp}</strong> to coordinate your Zoom/Google Meet video call slot in {formData.preferredTimezone}.
                   </p>
 
                   <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -162,6 +163,35 @@ WhatsApp: ${formData.countryCode} ${formData.whatsapp}`;
                     <p className="text-xs text-slate-500">
                       No spam, strictly private & 100% confidential property advisory.
                     </p>
+                  </div>
+
+                  {/* Purpose Selector: Buy vs Sell */}
+                  <div className="p-1.5 rounded-xl bg-slate-100 flex gap-1.5">
+                    <button
+                      type="button"
+                      onClick={() => setIntent('buy')}
+                      className={`flex-1 py-2 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 ${
+                        intent === 'buy'
+                          ? 'bg-emerald-700 text-white shadow-sm'
+                          : 'text-slate-700 hover:bg-white/60'
+                      }`}
+                    >
+                      <Building className="w-3.5 h-3.5" />
+                      <span>I want to BUY Property / Land</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => setIntent('sell')}
+                      className={`flex-1 py-2 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 ${
+                        intent === 'sell'
+                          ? 'bg-amber-600 text-white shadow-sm'
+                          : 'text-slate-700 hover:bg-white/60'
+                      }`}
+                    >
+                      <TrendingUp className="w-3.5 h-3.5" />
+                      <span>I want to SELL Land in India</span>
+                    </button>
                   </div>
 
                   {/* Name & Email */}
@@ -295,11 +325,11 @@ WhatsApp: ${formData.countryCode} ${formData.whatsapp}`;
                     </div>
                   </div>
 
-                  {/* Target Region & Budget */}
+                  {/* Target Region & Budget / Valuation */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1">
                       <label className="text-xs font-bold text-slate-700 block">
-                        Target City in Tamil Nadu
+                        {intent === 'buy' ? 'Target City in Tamil Nadu' : 'Location of Property to Sell'}
                       </label>
                       <select
                         value={formData.targetCity}
@@ -319,7 +349,7 @@ WhatsApp: ${formData.countryCode} ${formData.whatsapp}`;
 
                     <div className="space-y-1">
                       <label className="text-xs font-bold text-slate-700 block">
-                        Investment Budget
+                        {intent === 'buy' ? 'Investment Budget' : 'Expected Valuation / Price'}
                       </label>
                       <select
                         value={formData.budgetRange}
@@ -331,7 +361,8 @@ WhatsApp: ${formData.countryCode} ${formData.whatsapp}`;
                         <option value="₹40 Lakhs - ₹75 Lakhs (~$50K - $90K)">₹40L - ₹75 Lakhs (~$50K - $90K)</option>
                         <option value="₹75 Lakhs - ₹1.5 Crores (~$90K - $180K)">₹75L - ₹1.5 Cr (~$90K - $180K)</option>
                         <option value="₹1.5 Crores - ₹3 Crores (~$180K - $350K)">₹1.5 Cr - ₹3 Cr (~$180K - $350K)</option>
-                        <option value="₹3 Crores - ₹7+ Crores ($350K+)">₹3 Cr - ₹7+ Cr (Ultra Luxury)</option>
+                        <option value="₹3 Crores - ₹7+ Crores ($350K+)">₹3 Cr - ₹7+ Cr (Ultra Luxury / Large Land)</option>
+                        <option value="Open to Market Valuation">Open to Expert Market Valuation</option>
                       </select>
                     </div>
                   </div>
@@ -343,7 +374,11 @@ WhatsApp: ${formData.countryCode} ${formData.whatsapp}`;
                       className="w-full py-3.5 px-6 rounded-xl text-sm font-bold text-white bg-emerald-700 hover:bg-emerald-800 transition-all shadow-md shadow-emerald-700/25 flex items-center justify-center gap-2"
                     >
                       <Calendar className="w-4 h-4 text-amber-300" />
-                      <span>Confirm Video Consultation Slot</span>
+                      <span>
+                        {intent === 'buy'
+                          ? 'Confirm Video Consultation Slot'
+                          : 'Request Free Property Valuation & Remote Selling Call'}
+                      </span>
                     </button>
                   </div>
 

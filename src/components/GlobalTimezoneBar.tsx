@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Clock, PhoneCall, ShieldCheck, Building2 } from 'lucide-react';
+import { Clock, PhoneCall, ShieldCheck } from 'lucide-react';
 
 interface CityTime {
   city: string;
@@ -77,26 +77,21 @@ export default function GlobalTimezoneBar() {
           </div>
         </div>
 
-        {/* Right: Sri Thirumagal Builders Group & Approvals & WhatsApp */}
+        {/* Right: Approvals & WhatsApp */}
         <div className="flex items-center gap-3 text-[11px] shrink-0">
-          <div className="hidden xl:flex items-center gap-1.5 text-amber-300 font-semibold">
-            <Building2 className="w-3.5 h-3.5 text-amber-400" />
-            <span>Sri Thirumagal Builders Group</span>
-          </div>
-          <span className="hidden xl:inline text-slate-600">|</span>
           <div className="hidden lg:flex items-center gap-1.5 text-emerald-300">
             <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
             <span>100% CMDA & DTCP • RERA Registered</span>
           </div>
           <span className="hidden sm:inline text-slate-600">|</span>
           <a
-            href="https://wa.me/919840012345?text=Hello%20Tamil%20NRI%20Real%20Estate,%20I%20am%20an%20NRI%20interested%20in%20property%20investment%20in%20Tamil%20Nadu."
+            href="https://wa.me/919884495395?text=Hello%20TamilNRIProperty,%20I%20am%20an%20NRI%20interested%20in%20property%20investment%20in%20Tamil%20Nadu."
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-amber-400 hover:text-amber-300 font-bold transition-colors whitespace-nowrap"
           >
             <PhoneCall className="w-3 h-3 text-emerald-400" />
-            <span>WhatsApp NRI Desk: +91 98400 12345</span>
+            <span>WhatsApp NRI Desk: +91 98844 95395</span>
           </a>
         </div>
 

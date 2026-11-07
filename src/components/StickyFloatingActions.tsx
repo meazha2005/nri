@@ -43,7 +43,7 @@ export default function StickyFloatingActions() {
 
       {/* Floating WhatsApp Action Pill */}
       <a
-        href="https://wa.me/919840012345?text=Hello%20Tamil%20NRI%20Real%20Estate,%20I%20am%20an%20overseas%20buyer%20interested%20in%20Tamil%20Nadu%20properties."
+        href="https://wa.me/919884495395?text=Hello%20TamilNRIProperty,%20I%20am%20an%20overseas%20buyer%20interested%20in%20Tamil%20Nadu%20properties."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp with NRI Desk"

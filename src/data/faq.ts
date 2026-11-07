@@ -1,6 +1,6 @@
 export interface FAQItem {
   id: string;
-  category: 'Legal' | 'Remote Buying & PoA' | 'Tax & Banking' | 'Safety & Management';
+  category: 'Legal' | 'Remote Buying & PoA' | 'Tax & Banking' | 'Safety & Management' | 'Selling & Liquidation';
   question: string;
   tamilQuestion?: string;
   answer: string;
@@ -22,6 +22,20 @@ export const FAQS: FAQItem[] = [
     answer: "You do not need to take leave or travel to India. We execute a Special Power of Attorney (PoA) in favour of your trusted relative or our vetted senior legal advocate. We draft the PoA, you get it attested at your local Indian Embassy / Consulate or apostilled by a notary public in your home country, and courier it to Tamil Nadu. Our team gets it adjudicated at the District Registrar office and completes registration at the Sub-Registrar Office in your name."
   },
   {
+    id: "faq-selling-1",
+    category: "Selling & Liquidation",
+    question: "I own land or property in Tamil Nadu that I want to sell. Can I sell it remotely?",
+    tamilQuestion: "தமிழ்நாட்டில் உள்ள என் நிலம் அல்லது வீட்டை வெளிநாட்டிலிருந்தே விற்க முடியுமா?",
+    answer: "Yes! You can sell your plots, villas, flats, or ancestral properties without travelling to India. We provide a scientific market appraisal, connect directly with verified diaspora buyers, handle revenue survey & boundary demarcation, rectify Patta/Title documents, and execute the sale deed through an Indian Embassy-attested Special Power of Attorney (PoA) on your behalf."
+  },
+  {
+    id: "faq-selling-2",
+    category: "Selling & Liquidation",
+    question: "How is TDS deducted when an NRI sells property, and can it be reduced?",
+    tamilQuestion: "NRI சொத்து விற்கும்போது வரி (TDS) பிடித்தம் எப்படி? அதை குறைக்க முடியுமா?",
+    answer: "When an NRI sells property in India, the buyer is mandatorily required to deduct 20%+ TDS (plus surcharge & cess) under Section 195 on the total sale consideration. However, our in-house Chartered Accountants apply for a Lower Deduction Certificate (Form 13) under Section 195(2) from the Income Tax Assessing Officer based on your actual capital gains, drastically reducing or eliminating upfront tax deduction. We also complete Form 15CA & 15CB certifications to wire 100% of your net proceeds legally to your foreign bank account."
+  },
+  {
     id: "faq-3",
     category: "Tax & Banking",
     question: "Which bank accounts must I use, and how can I repatriate rental or sale proceeds?",
@@ -31,7 +45,7 @@ export const FAQS: FAQItem[] = [
   {
     id: "faq-4",
     category: "Legal",
-    question: "What specific legal due diligence does Tamil NRI Real Estate conduct?",
+    question: "What specific legal due diligence does TamilNRIProperty conduct?",
     tamilQuestion: "எங்கள் சொத்தின் சட்டப்பூர்வ சரிபார்ப்புகள் என்னென்ன செய்யப்படுகின்றன?",
     answer: "Our Senior High Court Advocates conduct a rigorous 12-point title audit: 1) 30-year Encumbrance Certificate (Villangam) for nil prior mortgages, 2) Revenue Patta, Chitta, and Adangal in the seller's name, 3) Complete Parent Document link chain (Mother Deeds), 4) CMDA / DTCP / HNTDA layout and planning permission approvals, 5) RERA registration verification, 6) Family tree and legal heir clearance certificate, 7) Land acquisition & coastal regulation zone (CRZ) clearances, and 8) Physical survey and boundary verification."
   },

@@ -8,7 +8,7 @@ export default function FAQSection() {
   const [openId, setOpenId] = useState<string | null>('faq-1');
   const [activeCategory, setActiveCategory] = useState<string>('All');
 
-  const categories = ['All', 'Legal', 'Remote Buying & PoA', 'Tax & Banking', 'Safety & Management'];
+  const categories = ['All', 'Selling & Liquidation', 'Legal', 'Remote Buying & PoA', 'Tax & Banking', 'Safety & Management'];
 
   const filteredFaqs =
     activeCategory === 'All'
@@ -111,7 +111,7 @@ export default function FAQSection() {
             Have a specific scenario regarding your ancestral land, inheritance, or tax treaty in your country?
           </p>
           <a
-            href="https://wa.me/919840012345?text=Hello%20Tamil%20NRI%20Real%20Estate,%20I%20have%20a%20specific%20question%20regarding%20NRI%20property%20regulations."
+            href="https://wa.me/919884495395?text=Hello%20TamilNRIProperty,%20I%20have%20a%20specific%20question%20regarding%20NRI%20property%20regulations."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-emerald-800 bg-white border border-emerald-300 hover:bg-emerald-50 transition-colors shadow-sm"

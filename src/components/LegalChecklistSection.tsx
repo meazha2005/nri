@@ -152,7 +152,7 @@ export default function LegalChecklistSection() {
           </div>
 
           <a
-            href="https://wa.me/919840012345?text=Hello%20Tamil%20NRI%20Real%20Estate,%20please%20send%20me%20the%20Sample%2012-Point%20Legal%20Due%20Diligence%20Dossier%20PDF."
+            href="https://wa.me/919884495395?text=Hello%20TamilNRIProperty,%20please%20send%20me%20the%20Sample%2012-Point%20Legal%20Due%20Diligence%20Dossier%20PDF."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-slate-900 bg-amber-400 hover:bg-amber-300 transition-all shrink-0 shadow-lg"

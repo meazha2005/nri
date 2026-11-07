@@ -321,7 +321,7 @@ export default function InteractiveROICalculator() {
             {/* Action Buttons */}
             <div className="pt-6 space-y-2.5">
               <a
-                href={`https://wa.me/919840012345?text=Hello%20Tamil%20NRI%20Real%20Estate,%20I%20calculated%20an%20investment%20of%20₹${(
+                href={`https://wa.me/919884495395?text=Hello%20TamilNRIProperty,%20I%20calculated%20an%20investment%20of%20₹${(
                   investmentINR / 100000
                 ).toFixed(0)}%20Lakhs%20for%20${cityCorridor}%20(${propertyType}).%20Please%20send%20matching%20properties.`}
                 target="_blank"

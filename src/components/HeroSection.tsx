@@ -32,17 +32,19 @@ export default function HeroSection() {
             {/* Elite Badge */}
             <div className="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 shadow-sm text-emerald-900 text-xs sm:text-sm font-semibold">
               <span className="flex h-2 w-2 rounded-full bg-emerald-600 animate-pulse" />
+              <span className="text-amber-800 font-extrabold italic">&ldquo;Honest is key for success&rdquo;</span>
+              <span className="text-slate-400">•</span>
               <span className="text-emerald-800 font-bold">சொந்த மண்ணில் சொந்த வீடு</span>
               <span className="text-slate-400">•</span>
-              <span className="text-amber-800 font-bold">Sri Thirumagal Builders Group</span>
+              <span className="text-slate-800 font-bold">Sri Thirumagal Builders Group</span>
               <span className="text-slate-400">•</span>
-              <span className="text-slate-700">Trusted by 1,800+ Tamil Families Worldwide</span>
+              <span className="text-slate-700">Trusted by 1,800+ Families</span>
             </div>
 
             {/* Main Title */}
             <div className="space-y-3">
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-[1.12]">
-                Own Prime Land & Luxury Living in <br className="hidden sm:inline" />
+                Buy & Sell Prime Land in <br className="hidden sm:inline" />
                 <span className="bg-gradient-to-r from-emerald-700 via-emerald-800 to-amber-600 bg-clip-text text-transparent">
                   Tamil Nadu
                 </span>
@@ -51,10 +53,9 @@ export default function HeroSection() {
                 </span>
               </h1>
               <p className="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
-                RERA & DTCP verified villa plots, luxury beachfront estates, and high-yield apartments across 
+                Whether you want to <strong className="text-slate-900 font-semibold">buy verified plots and luxury villas</strong> or <strong className="text-emerald-800 font-semibold">sell existing land & ancestral property</strong> across 
                 <strong className="text-slate-900 font-semibold"> Chennai, Coimbatore, Madurai & Hosur</strong>. 
-                Experience 100% remote Power of Attorney registration, 30-year high-court legal vetting, 
-                and white-glove property management.
+                Experience 100% remote Power of Attorney execution, High Court legal vetting, fair market valuation, and seamless FEMA repatriation.
               </p>
             </div>
 
@@ -88,19 +89,26 @@ export default function HeroSection() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
               <a
-                href="#properties"
+                href="#nri-services"
                 className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm sm:text-base font-bold text-white bg-emerald-700 hover:bg-emerald-800 rounded-xl shadow-lg shadow-emerald-700/25 transition-all hover:scale-[1.02] border border-emerald-600"
               >
-                <span>Explore Verified Properties</span>
+                <span>Explore NRI Services</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
 
               <a
-                href="#consultation"
+                href="#properties"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm sm:text-base font-bold text-slate-800 bg-amber-50 hover:bg-amber-100 border border-amber-300 rounded-xl transition-all"
               >
                 <Sparkles className="w-4 h-4 text-amber-600" />
-                <span>Schedule 1-on-1 Consultation</span>
+                <span>View Verified Properties</span>
+              </a>
+
+              <a
+                href="#sell-property"
+                className="inline-flex items-center justify-center gap-1.5 px-5 py-3.5 text-sm sm:text-base font-bold text-emerald-900 bg-white hover:bg-emerald-50 border border-emerald-300 rounded-xl transition-all"
+              >
+                <span>Want to Sell Land?</span>
               </a>
             </div>
 

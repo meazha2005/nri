@@ -17,13 +17,13 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Why Tamil Nadu', href: '#why-tamilnadu' },
-    { name: 'Properties', href: '#properties' },
     { name: 'NRI Services', href: '#nri-services' },
+    { name: 'Properties', href: '#properties' },
+    { name: 'Sell Land', href: '#sell-property' },
+    { name: 'Why Tamil Nadu', href: '#why-tamilnadu' },
     { name: 'How It Works', href: '#remote-process' },
     { name: 'Legal Audit', href: '#due-diligence' },
     { name: 'ROI Calculator', href: '#roi-calculator' },
-    { name: 'Client Stories', href: '#testimonials' },
     { name: 'FAQ', href: '#faq' },
   ];
 
@@ -32,7 +32,7 @@ export default function Navbar() {
       className={`sticky top-0 z-40 transition-all duration-300 ${
         isScrolled
           ? 'bg-white/95 backdrop-blur-md shadow-md shadow-emerald-950/5 border-b border-slate-200 py-2 sm:py-2.5'
-          : 'bg-white border-b border-slate-100 py-3 sm:py-3.5'
+          : 'bg-white border-b border-slate-100 py-2.5 sm:py-3'
       }`}
     >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,13 +40,13 @@ export default function Navbar() {
           
           {/* Logo & Brand Identity */}
           <a href="#" className="flex items-center gap-3 shrink-0 group">
-            <div className="relative w-11 h-11 sm:w-12 sm:h-12 shrink-0 rounded-full p-0.5 bg-gradient-to-tr from-emerald-600 via-amber-500 to-emerald-800 shadow-sm transition-transform duration-300 group-hover:scale-105">
+            <div className="relative w-14 h-14 sm:w-16 sm:h-16 md:w-[66px] md:h-[66px] shrink-0 rounded-full p-0.5 bg-gradient-to-tr from-emerald-600 via-amber-500 to-emerald-800 shadow-md transition-transform duration-300 group-hover:scale-105">
               <div className="w-full h-full bg-white rounded-full p-0.5 overflow-hidden flex items-center justify-center">
                 <Image
                   src="/logo.png"
-                  alt="Tamil NRI Real Estate - Sri Thirumagal Builders Group"
-                  width={48}
-                  height={48}
+                  alt="TamilNRIProperty - Sri Thirumagal Builders Group"
+                  width={66}
+                  height={66}
                   className="object-contain w-full h-full"
                   priority
                 />
@@ -56,8 +56,8 @@ export default function Navbar() {
             <div className="flex flex-col shrink-0">
               {/* Brand Title + NRI Desk tag */}
               <div className="flex items-center gap-2">
-                <span className="font-black text-base sm:text-lg tracking-tight text-slate-900 group-hover:text-emerald-800 transition-colors whitespace-nowrap">
-                  TAMIL NRI <span className="text-emerald-700">REAL ESTATE</span>
+                <span className="font-black text-base sm:text-lg lg:text-xl tracking-tight text-slate-900 group-hover:text-emerald-800 transition-colors whitespace-nowrap">
+                  Tamil<span className="text-emerald-700">NRIProperty</span>
                 </span>
                 <span className="hidden sm:inline-flex items-center px-1.5 py-0.5 text-[9px] font-black uppercase tracking-wider bg-amber-100 text-amber-900 rounded border border-amber-300 whitespace-nowrap">
                   NRI Desk
@@ -66,15 +66,21 @@ export default function Navbar() {
 
               {/* Group Affiliation: Sri Thirumagal Builders Group */}
               <div className="flex items-center gap-1.5 mt-0.5">
-                <span className="text-[10px] sm:text-[10.5px] font-bold text-emerald-800 tracking-wide uppercase bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 whitespace-nowrap inline-flex items-center gap-1">
+                <span className="text-[10px] sm:text-[11px] font-bold text-emerald-800 tracking-wide uppercase bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 whitespace-nowrap inline-flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
                   A Unit of Sri Thirumagal Builders Group
                 </span>
               </div>
 
-              {/* Cultural Tagline */}
-              <div className="text-[11px] font-semibold text-amber-600 tracking-tight mt-0.5 whitespace-nowrap">
-                சொந்த மண்ணில் உங்கள் சொத்து
+              {/* Motto Tag + Cultural Tagline */}
+              <div className="text-[11px] tracking-tight mt-0.5 whitespace-nowrap flex items-center gap-1.5">
+                <span className="font-bold text-amber-700 italic">
+                  &ldquo;Honest is key for success&rdquo;
+                </span>
+                <span className="text-slate-300">•</span>
+                <span className="font-semibold text-emerald-800">
+                  சொந்த மண்ணில் உங்கள் சொத்து
+                </span>
               </div>
             </div>
           </a>
@@ -95,7 +101,7 @@ export default function Navbar() {
           {/* Right Action CTAs */}
           <div className="hidden sm:flex items-center gap-2 xl:gap-3 shrink-0">
             <a
-              href="https://wa.me/919840012345?text=Hello%20Tamil%20NRI%20Real%20Estate,%20I%20would%20like%20to%20request%20a%20property%20consultation."
+              href="https://wa.me/919884495395?text=Hello%20TamilNRIProperty,%20I%20would%20like%20to%20request%20a%20property%20consultation."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-2.5 xl:px-3 py-2 text-xs font-bold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-lg transition-all shadow-xs whitespace-nowrap"
@@ -133,7 +139,10 @@ export default function Navbar() {
               <span className="text-[11px] font-extrabold uppercase text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 inline-block w-fit">
                 Sri Thirumagal Builders Group
               </span>
-              <span className="text-xs font-semibold text-amber-600 mt-1">
+              <span className="text-[11px] font-bold text-amber-700 italic mt-1">
+                &ldquo;Honest is key for success&rdquo;
+              </span>
+              <span className="text-xs font-semibold text-emerald-800">
                 சொந்த மண்ணில் உங்கள் சொத்து
               </span>
             </div>
@@ -158,7 +167,7 @@ export default function Navbar() {
 
           <div className="pt-3 border-t border-slate-200 flex flex-col gap-2.5">
             <a
-              href="https://wa.me/919840012345?text=Hello%20Tamil%20NRI%20Real%20Estate,%20I%20would%20like%20to%20request%20a%20property%20consultation."
+              href="https://wa.me/919884495395?text=Hello%20TamilNRIProperty,%20I%20would%20like%20to%20request%20a%20property%20consultation."
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}

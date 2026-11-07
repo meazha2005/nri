@@ -10,14 +10,24 @@ import {
   Key,
   Compass,
   CheckCircle,
-  HelpCircle,
+  TrendingUp,
   ArrowRight,
+  DollarSign,
+  Landmark,
 } from 'lucide-react';
 
 export default function NRIServicesSuite() {
   const services = [
     {
-      icon: <Scale className="w-6 h-6 text-emerald-700" />,
+      icon: <TrendingUp className="w-6 h-6 text-emerald-700" />,
+      title: "NRI Land & Property Selling Desk",
+      tamilTitle: "சொத்து மறுவிற்பனை & வெளிநாட்டு பரிமாற்றம்",
+      description:
+        "Sell your land, plots, or villas in India without traveling down. We handle scientific market valuation, connect with vetted diaspora buyers, execute Embassy Special PoA, secure Lower TDS (Form 13), and wire proceeds abroad.",
+      deliverable: "Sale Proceeds Credited Abroad + Form 15CA/CB Tax Clearance"
+    },
+    {
+      icon: <Scale className="w-6 h-6 text-amber-600" />,
       title: "12-Point High Court Legal Title Audit",
       tamilTitle: "சட்டப்பூர்வ உரிமை சரிபார்ப்பு",
       description:
@@ -25,23 +35,23 @@ export default function NRIServicesSuite() {
       deliverable: "Written High Court Advocate Title Opinion Report"
     },
     {
-      icon: <FileCheck className="w-6 h-6 text-amber-600" />,
-      title: "Remote Power of Attorney (PoA) Registration",
+      icon: <FileCheck className="w-6 h-6 text-teal-700" />,
+      title: "Remote Power of Attorney (PoA) Buying & Selling",
       tamilTitle: "தொலைதூர பவர் ஆஃப் அட்டார்னி பதிவு",
       description:
-        "Buy and register property in your name without traveling to India. We draft the customized Special PoA, guide your local Indian Embassy/Consulate attestation, handle local District Registrar adjudication, and complete registration.",
-      deliverable: "Legally Certified Registered Sale Deed in Your Name"
+        "Buy or sell property without boarding a flight. We draft tailored Special PoAs, guide your local Indian Embassy / Consulate attestation, handle District Registrar adjudication, and complete Sub-Registrar execution.",
+      deliverable: "Legally Certified Registered Deed Executed Remotely"
     },
     {
-      icon: <Building className="w-6 h-6 text-teal-700" />,
-      title: "FEMA, RBI & Tax Repatriation Advisory",
-      tamilTitle: "வரி மற்றும் வெளிநாட்டு பணப்பரிமாற்றம்",
+      icon: <Landmark className="w-6 h-6 text-emerald-700" />,
+      title: "FEMA, RBI & Lower TDS (Form 13) Repatriation",
+      tamilTitle: "வரி சேமிப்பு மற்றும் வெளிநாட்டு பணப்பரிமாற்றம்",
       description:
-        "Our in-house Chartered Accountants assist with NRE/NRO funds transfer, Lower TDS Certificate (Form 13 under Section 195), and seamless repatriation of rental income or future sale proceeds under Form 15CA/15CB.",
-      deliverable: "Full CA Certification & Tax Clearance Roadmap"
+        "Our in-house Chartered Accountants obtain Lower/Nil TDS Certificates under Section 195 (saving up to 20% on sale cuts), manage NRE/NRO funds, and guarantee seamless repatriation under Form 15CA & 15CB.",
+      deliverable: "Full CA Certification & Legal Foreign Bank Wire Transfer"
     },
     {
-      icon: <Video className="w-6 h-6 text-emerald-700" />,
+      icon: <Video className="w-6 h-6 text-amber-600" />,
       title: "Live 4K Drone & 360° Virtual Walkthrough",
       tamilTitle: "4K ட்ரோன் நேரடி தணிக்கை",
       description:
@@ -49,39 +59,31 @@ export default function NRIServicesSuite() {
       deliverable: "Raw 4K Drone Video Footage & Geo-Tag Coordinates"
     },
     {
-      icon: <ShieldCheck className="w-6 h-6 text-amber-600" />,
+      icon: <ShieldCheck className="w-6 h-6 text-teal-700" />,
       title: "Anti-Encroachment Fencing & GPS Geo-Tagging",
       tamilTitle: "ஆக்கிரமிப்பு தடுப்பு வேலி மற்றும் பாதுகாப்பு",
       description:
         "Protect your vacant land from encroachment. We install reinforced boundary stones, heavy-duty chain-link fencing with an iron gate, bilingual ownership signboards, and provide quarterly video surveillance reports.",
       deliverable: "Quarterly GPS Surveillance Photo & Video Logs"
-    },
-    {
-      icon: <Key className="w-6 h-6 text-teal-700" />,
-      title: "End-to-End Tenancy & Asset Management",
-      tamilTitle: "முழுமையான பராமரிப்பு மற்றும் வாடகை நிர்வாகம்",
-      description:
-        "For villas and apartments: tenant background vetting, registered rental agreements, direct rent collection credited to your NRO account, corporation property tax payments, and routine repair management.",
-      deliverable: "Monthly Rent Statement & Property Maintenance Portal"
     }
   ];
 
   return (
     <section id="nri-services" className="py-20 bg-slate-50/70 border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider">
             <Compass className="w-3.5 h-3.5 text-amber-600" />
-            <span>360° Remote Ecosystem</span>
+            <span>360° Remote Ecosystem (Buy & Sell)</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Tailored Specifically for Overseas Tamils
           </h2>
           <p className="text-base sm:text-lg text-slate-600">
-            From your first virtual tour to registered title deeds and post-possession property care, 
-            we remove every pain point of remote property ownership.
+            From remote property acquisition and legal title vetting to selling your existing land and repatriating your wealth abroad, 
+            we provide complete peace of mind across the diaspora.
           </p>
         </div>
 
@@ -123,24 +125,25 @@ export default function NRIServicesSuite() {
           ))}
         </div>
 
-        {/* Highlight Callout */}
-        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-white border-2 border-emerald-100 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+        {/* Selling Facility Callout Strip */}
+        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-850 to-emerald-950 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 border border-emerald-900/50">
           <div className="space-y-1 text-center md:text-left">
-            <h4 className="text-lg font-bold text-slate-900">
-              Need assistance with an existing ancestral property or family dispute in Tamil Nadu?
+            <span className="px-2.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-amber-400/20 text-amber-300 border border-amber-400/30 inline-block mb-1">
+              NRI Land Liquidation & Resale
+            </span>
+            <h4 className="text-lg sm:text-xl font-bold text-white">
+              Own land or ancestral property in Tamil Nadu that you want to sell?
             </h4>
-            <p className="text-xs sm:text-sm text-slate-600">
-              We also handle legacy title searches, partition deed drafting, Patta transfer, and revenue legal services for NRIs.
+            <p className="text-xs sm:text-sm text-slate-300 max-w-2xl">
+              We provide accurate market valuation, remote Consulate PoA execution, Lower TDS (Form 13) tax minimization, and 100% legal repatriation wired to your foreign bank account.
             </p>
           </div>
 
           <a
-            href="https://wa.me/919840012345?text=Hello%20Tamil%20NRI%20Real%20Estate,%20I%20need%20legal%20advisory%20for%20my%20existing%20ancestral%20property%20in%20Tamil%20Nadu."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-bold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 transition-colors shrink-0"
+            href="#sell-property"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-slate-950 bg-amber-400 hover:bg-amber-300 transition-all shrink-0 shadow-lg"
           >
-            <span>Consult Legal Desk</span>
+            <span>Explore Selling Desk</span>
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

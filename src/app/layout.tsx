@@ -2,11 +2,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Tamil NRI Real Estate | Sri Thirumagal Builders Group | Trusted Remote Property Advisory in Tamil Nadu",
+  title: "TamilNRIProperty | Buy & Sell Land in Tamil Nadu | Sri Thirumagal Builders Group",
   description:
-    "Promoted by Sri Thirumagal Builders Group. Premium RERA & DTCP verified plots, luxury villas, and high-yield apartments across Chennai, Coimbatore, Madurai & Hosur for the global Tamil diaspora. Remote registration, legal due diligence, and 360° property management.",
+    "Promoted by Sri Thirumagal Builders Group. \"Honest is key for success\". Complete remote property advisory for the global Tamil diaspora: buy verified DTCP/RERA plots & villas or sell your existing land/ancestral property in Tamil Nadu with Embassy PoA and FEMA repatriation.",
   keywords: [
-    "Tamil NRI Real Estate",
+    "TamilNRIProperty",
+    "Tamil NRI Property",
+    "Sell land in Tamil Nadu NRI",
+    "NRI property selling India",
     "Sri Thirumagal Builders Group",
     "Sri Thirumagal Builders NRI",
     "NRI Property in Tamil Nadu",
@@ -16,6 +19,7 @@ export const metadata: Metadata = {
     "Remote Land Registration Tamil Nadu",
     "DTCP RERA Plots Chennai",
     "NRI Power of Attorney Property India",
+    "Lower TDS Form 13 NRI property sale",
   ],
   icons: {
     icon: "/icon.png",

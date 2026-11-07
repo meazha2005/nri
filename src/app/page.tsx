@@ -2,9 +2,10 @@ import React from 'react';
 import GlobalTimezoneBar from '@/components/GlobalTimezoneBar';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
-import WhyTamilNadu from '@/components/WhyTamilNadu';
-import CuratedProperties from '@/components/CuratedProperties';
 import NRIServicesSuite from '@/components/NRIServicesSuite';
+import CuratedProperties from '@/components/CuratedProperties';
+import SellPropertySection from '@/components/SellPropertySection';
+import WhyTamilNadu from '@/components/WhyTamilNadu';
 import StepByStepRemoteProcess from '@/components/StepByStepRemoteProcess';
 import LegalChecklistSection from '@/components/LegalChecklistSection';
 import InteractiveROICalculator from '@/components/InteractiveROICalculator';
@@ -23,42 +24,46 @@ export default function HomePage() {
       {/* 2. Primary Navigation Header */}
       <Navbar />
 
-      {/* 3. Hero Section with Trust Elements & Core Pitch */}
+      {/* Main Content Sections */}
       <main className="flex-1">
+        {/* 3. Hero Section with Trust Elements & Core Pitch */}
         <HeroSection />
 
-        {/* 4. Why Tamil Nadu Economic & Heritage Case */}
-        <WhyTamilNadu />
-
-        {/* 5. Curated Properties Catalog with Dynamic Currency FX */}
-        <CuratedProperties />
-
-        {/* 6. Comprehensive 360° NRI Services Suite */}
+        {/* 4. Comprehensive 360° NRI Services Suite (1st as per scroll) */}
         <NRIServicesSuite />
 
-        {/* 7. Step-by-Step Frictionless Remote Acquisition Roadmap */}
+        {/* 5. Curated Properties Catalog (2nd as per scroll) */}
+        <CuratedProperties />
+
+        {/* 6. NRI Land & Property Selling Facility (For NRIs Selling Land in India) */}
+        <SellPropertySection />
+
+        {/* 7. Why Tamil Nadu Economic & Heritage Case */}
+        <WhyTamilNadu />
+
+        {/* 8. Step-by-Step Frictionless Remote Acquisition Roadmap */}
         <StepByStepRemoteProcess />
 
-        {/* 8. 12-Point Transparent High Court Legal Due Diligence */}
+        {/* 9. 12-Point Transparent High Court Legal Due Diligence */}
         <LegalChecklistSection />
 
-        {/* 9. Interactive ROI, Capital Gains & Rental Yield Calculator */}
+        {/* 10. Interactive ROI, Capital Gains & Rental Yield Calculator */}
         <InteractiveROICalculator />
 
-        {/* 10. Diaspora Voices & Global Client Testimonials */}
+        {/* 11. Diaspora Voices & Global Client Testimonials */}
         <TestimonialsSection />
 
-        {/* 11. NRI Knowledge Base & FAQs */}
+        {/* 12. NRI Knowledge Base & FAQs */}
         <FAQSection />
 
-        {/* 12. Consultation Booking Form */}
+        {/* 13. Consultation Booking Form */}
         <ConsultationFormSection />
       </main>
 
-      {/* 13. Comprehensive Brand Footer */}
+      {/* 14. Comprehensive Brand Footer */}
       <Footer />
 
-      {/* 14. Sticky Floating WhatsApp & Fast Action Buttons */}
+      {/* 15. Sticky Floating WhatsApp & Fast Action Buttons */}
       <StickyFloatingActions />
     </div>
   );

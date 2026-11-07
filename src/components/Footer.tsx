@@ -27,27 +27,33 @@ export default function Footer() {
           {/* Brand Col (2 cols on lg) */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full p-0.5 bg-gradient-to-tr from-emerald-500 via-amber-400 to-emerald-700 shrink-0">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full p-0.5 bg-gradient-to-tr from-emerald-500 via-amber-400 to-emerald-700 shrink-0 shadow-md">
                 <div className="w-full h-full bg-white rounded-full p-0.5 overflow-hidden flex items-center justify-center">
                   <Image
                     src="/logo.png"
-                    alt="Tamil NRI Real Estate"
-                    width={48}
-                    height={48}
-                    className="object-contain"
+                    alt="TamilNRIProperty - Sri Thirumagal Builders Group"
+                    width={64}
+                    height={64}
+                    className="object-contain w-full h-full"
                   />
                 </div>
               </div>
               <div>
-                <span className="font-extrabold text-lg tracking-tight text-white block">
-                  TAMIL NRI <span className="text-emerald-400">REAL ESTATE</span>
+                <span className="font-extrabold text-lg sm:text-xl tracking-tight text-white block">
+                  Tamil<span className="text-emerald-400">NRIProperty</span>
                 </span>
                 <span className="text-[11px] font-bold text-emerald-300 block tracking-wide uppercase">
                   A Unit of Sri Thirumagal Builders Group
                 </span>
-                <span className="text-xs font-semibold text-amber-400">
-                  சொந்த மண்ணில் உங்கள் சொத்து
-                </span>
+                <div className="text-xs flex items-center gap-1.5 mt-0.5">
+                  <span className="font-bold text-amber-400 italic">
+                    &ldquo;Honest is key for success&rdquo;
+                  </span>
+                  <span className="text-slate-500">•</span>
+                  <span className="font-semibold text-emerald-400">
+                    சொந்த மண்ணில் உங்கள் சொத்து
+                  </span>
+                </div>
               </div>
             </div>
 
@@ -109,6 +115,11 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs text-slate-300">
               <li>
+                <a href="#sell-property" className="text-amber-300 font-semibold hover:text-amber-200 transition-colors">
+                  NRI Land Selling & Liquidation Desk
+                </a>
+              </li>
+              <li>
                 <a href="#nri-services" className="hover:text-emerald-400 transition-colors">
                   12-Point High Court Legal Title Audit
                 </a>
@@ -161,14 +172,14 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                <a href="tel:+919840012345" className="hover:text-emerald-400 transition-colors">
-                  +91 98400 12345 (NRI Line)
+                <a href="tel:+919884495395" className="hover:text-emerald-400 transition-colors">
+                  +91 98844 95395 (NRI Line)
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                <a href="mailto:desk@tamilnrirealestate.com" className="hover:text-emerald-400 transition-colors">
-                  desk@tamilnrirealestate.com
+                <a href="mailto:desk@tamilnriproperty.com" className="hover:text-emerald-400 transition-colors">
+                  desk@tamilnriproperty.com
                 </a>
               </li>
             </ul>
@@ -179,7 +190,7 @@ export default function Footer() {
         {/* Disclaimer & Compliance Notice */}
         <div className="py-6 border-b border-slate-800 text-[11px] text-slate-400 leading-relaxed">
           <p>
-            <strong>Statutory Compliance Disclaimer:</strong> Tamil NRI Real Estate is an overseas real estate advisory and facilitation firm. 
+            <strong>Statutory Compliance Disclaimer:</strong> TamilNRIProperty is an overseas real estate advisory and facilitation firm. 
             All featured plots, villas, and apartments are promoted by verified, RERA-registered developers and approved by CMDA, DTCP, or local planning authorities. 
             Remote Power of Attorney registrations are executed in compliance with the Indian Registration Act, FEMA (Foreign Exchange Management Act), and RBI regulations. 
             All projected rental yields and capital growth estimates are indicative models based on historical corridor performance.
@@ -189,7 +200,7 @@ export default function Footer() {
         {/* Bottom Bar with Back to Top */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div>
-            © 2025 TAMIL NRI REAL ESTATE — A Unit of Sri Thirumagal Builders Group. All Rights Reserved.
+            © 2025 TamilNRIProperty — A Unit of Sri Thirumagal Builders Group. All Rights Reserved.
           </div>
 
           <div className="flex items-center gap-4">
