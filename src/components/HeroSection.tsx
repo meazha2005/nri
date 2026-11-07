@@ -31,21 +31,30 @@ export default function HeroSection() {
             
 
             {/* Main Title */}
-            <div className="space-y-3">
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-[1.12]">
-                Buy & Sell Prime Land in <br className="hidden sm:inline" />
+            <div className="space-y-4">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-[1.1]">
+                <span className="text-slate-900">Your Dream Land in</span>{' '}
                 <span className="bg-gradient-to-r from-emerald-700 via-emerald-800 to-amber-600 bg-clip-text text-transparent">
                   Tamil Nadu
                 </span>
-                <span className="text-slate-900 block text-2xl sm:text-4xl lg:text-5xl mt-2 font-extrabold">
-                  Without Leaving Your Country.
+                <span className="block text-2xl sm:text-4xl lg:text-5xl mt-2 font-extrabold text-slate-800">
+                  Buy & Sell — Without Leaving Your Country.
                 </span>
               </h1>
               <p className="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
-                Whether you want to <strong className="text-slate-900 font-semibold">buy verified plots and luxury villas</strong> or <strong className="text-emerald-800 font-semibold">sell existing land & ancestral property</strong> across 
-                <strong className="text-slate-900 font-semibold"> Chennai, Coimbatore, Madurai & Hosur</strong>. 
-                Experience 100% remote Power of Attorney execution, High Court legal vetting, fair market valuation, and seamless FEMA repatriation.
+                <strong className="text-slate-900 font-semibold">Buy verified plots & luxury villas</strong> or{' '}
+                <strong className="text-emerald-800 font-semibold">sell ancestral land & property</strong> — 100% remotely,
+                with High Court legal vetting, Remote Power of Attorney, fair market valuation, and seamless FEMA repatriation.
               </p>
+              {/* City Tags */}
+              <div className="flex flex-wrap gap-2 pt-1">
+                {['Chennai', 'Mahabalipuram', 'Coimbatore', 'Madurai', 'Hosur', 'Trichy'].map((city) => (
+                  <span key={city} className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold">
+                    <MapPin className="w-3 h-3" />
+                    {city}
+                  </span>
+                ))}
+              </div>
             </div>
 
             {/* NRI Exclusive Highlights */}
